@@ -1,0 +1,18 @@
+<ul>
+    <li *ngFor="let todo of todos">
+        <a routerLink="/todo-detail/{{todo.id}}">
+            {{todo.title}} - {{todo.completed}}
+        </a>
+
+    </li>
+</ul>
+
+
+<hr>
+
+<!-- subscription işlemini async keyword üstleniyor -->
+<ul>
+    <li *ngFor="let todo of todo$ | async">
+        {{todo.title}} - {{todo.completed}}
+    </li>
+</ul>
