@@ -8,16 +8,22 @@ import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 import { LayoutModule } from './components/site/layout/layout.module';
+import { AngularPipesComponent } from './pipes/angular-pipes/angular-pipes.component';
+import { OrderstatusPipe } from './pipes/orderstatus.pipe';
 
 // http api işlemleri gerçekleştirebiliriz.
 // http service barındırır.
+
+// custom pipelar component gibi declarations kısmına tanımlanmalıdır.
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    TodoDetailComponent
+    TodoDetailComponent,
+    AngularPipesComponent,
+    OrderstatusPipe
   ],
   imports: [
     BrowserModule,
@@ -25,7 +31,6 @@ import { LayoutModule } from './components/site/layout/layout.module';
     HttpClientModule,
     LayoutModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

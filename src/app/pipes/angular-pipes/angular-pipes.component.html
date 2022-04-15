@@ -1,0 +1,30 @@
+
+<!-- ekrana basılacak olan verilerin kullanıcı açısından daha düzgün bir formatta anlaşır bir şekilde görünmesini istersek kullanmalıyız. veriyi transform etmek -->
+
+date : {{
+   order?.orderDate
+}}
+<br>
+
+order List Price : {{order?.listPrice}} {{order?.currency}}
+
+<br>
+
+customer firstname: {{order?.customerFirstName}}
+
+<!-- built-in pipelar angular tarafında tanımlanmış pipelarımızı date,number,currency, uppercase,lowercase, async -->
+<!-- | ile pipe bağlanılır -->
+
+<br>
+date with pipe : {{ order?.orderDate | date:'dd.MM.yyyy HH:mm'}}
+
+<br>
+order List Price : {{order?.listPrice | number:'1.0-0'  }}
+<br>
+order List Price : {{order?.listPrice | number:'1.0-0' | currency: order?.currency }}
+<br>
+customer firstname: {{order?.customerFirstName | uppercase}} : {{order?.customerLastname | lowercase}}
+
+<br>
+
+Sipariş Durum : {{order?.status | orderstatus}}
