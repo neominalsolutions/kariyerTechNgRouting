@@ -17,7 +17,9 @@ export class TodoDetailComponent implements OnInit {
     console.log('activatedRoute', this.activatedRoute);
     const params = this.activatedRoute.snapshot.params;
     console.log('params', params);
-
+    const queryParams = this.activatedRoute.snapshot.queryParams;
+    console.log('queryParams', queryParams);
+  
     // apiden servise bağlanıp veri çekeriz.
 
 

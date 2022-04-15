@@ -4,6 +4,12 @@
             {{todo.title}} - {{todo.completed}}
         </a>
 
+        <br>
+
+        <a routerLink="/todo-detail?name={{todo.title}}">
+            {{todo.title}} - queryString Sample
+        </a>
+
     </li>
 </ul>
 

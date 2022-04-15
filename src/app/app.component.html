@@ -1,4 +1,4 @@
-<nav>
+<!-- <nav>
     <a routerLink="/home">Home Page</a>
     &nbsp;
     <a routerLink="/about">About Page</a>
@@ -7,11 +7,24 @@
     &nbsp;
     <a href="javascript:void()" (click)="redirectToHome()">Home Page</a>
     &nbsp;
-</nav>
+
+    <a routerLink="/admin">Admin Layout Page</a>
+    &nbsp;
+    <a routerLink="/admin/users">Admin Users Page</a>
+    &nbsp;
+    <a routerLink="/crm">Crm Layout Page</a>
+    &nbsp;
+    <a routerLink="/crm/customers">Crm Customers Page</a>
+    &nbsp;
+</nav> -->
 
 <!-- routerLink directive kullanırız -->
 <!-- sayfa reload olmadan yönlenebilir. -->
 <!-- routerLink kullanı angular uygulaması içerisinde isek yönlendirme yapmak için href yerine tercih ederiz. -->
 
+<!-- 1. router outlet bu ilgili modüllere yönlendirme yapmak için uygulamanın ilk çalıştığı nokta. admin,crm -->
+<!-- <router-outlet></router-outlet> -->
 
-<router-outlet></router-outlet>
+<app-site-layout></app-site-layout>
+<!-- <router-outlet></router-outlet> -->
+
